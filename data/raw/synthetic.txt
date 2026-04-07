@@ -1,0 +1,24 @@
+# Synthetic Hinglish sentences for augmenting the dataset
+# These cover various code-switching patterns
+# Date: 2026-04-07
+
+main kal school nahi jaunga
+please mujhe ek glass water de do
+uska performance bahut impressive tha
+hum log weekend pe outing plan kar rahe hai
+ye assignment bahut difficult hai yaar
+meri sister ne new phone kharida hai
+tum logo ko meeting ke liye time pe aana hai
+us restaurant ka food amazing hai
+mai bohot tired hu aaj
+kya tumne wo email check kiya?
+ye problem solve karna bahut easy hai
+bhai mujhe tickets book karni hai
+us park mein bahut beautiful flowers hai
+mere friend ne mujhe surprise diya
+tum apna homework complete karo pehle
+is movie ki story bahut interesting hai
+mujhe lagta hai rain hogi aaj
+uska birthday next week hai
+kya tum online ho abhi?
+maine apna resume update kar liya

@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "text": "kal meeting cancel ho gaya yaar",
+    "tokens": [
+      {"word": "kal",     "lang": "HI"},
+      {"word": "meeting", "lang": "EN"},
+      {"word": "cancel",  "lang": "EN"},
+      {"word": "ho",      "lang": "HI"},
+      {"word": "gaya",    "lang": "HI"},
+      {"word": "yaar",    "lang": "HI"}
+    ]
+  },
+  {
+    "id": 2,
+    "text": "bhai ye movie bahut amazing thi",
+    "tokens": [
+      {"word": "bhai",    "lang": "HI"},
+      {"word": "ye",      "lang": "HI"},
+      {"word": "movie",   "lang": "EN"},
+      {"word": "bahut",   "lang": "HI"},
+      {"word": "amazing", "lang": "EN"},
+      {"word": "thi",     "lang": "HI"}
+    ]
+  },
+  {
+    "id": 3,
+    "text": "mujhe lagta hai ki ye sahi nahi hai",
+    "tokens": [
+      {"word": "mujhe",  "lang": "HI"},
+      {"word": "lagta",  "lang": "HI"},
+      {"word": "hai",    "lang": "HI"},
+      {"word": "ki",     "lang": "HI"},
+      {"word": "ye",     "lang": "HI"},
+      {"word": "sahi",   "lang": "HI"},
+      {"word": "nahi",   "lang": "HI"},
+      {"word": "hai",    "lang": "HI"}
+    ]
+  },
+  {
+    "id": 4,
+    "text": "tu kab aa raha hai office?",
+    "tokens": [
+      {"word": "tu",     "lang": "HI"},
+      {"word": "kab",    "lang": "HI"},
+      {"word": "aa",     "lang": "HI"},
+      {"word": "raha",   "lang": "HI"},
+      {"word": "hai",    "lang": "HI"},
+      {"word": "office", "lang": "EN"}
+    ]
+  },
+  {
+    "id": 5,
+    "text": "yaar please help kar do meri assignment mein",
+    "tokens": [
+      {"word": "yaar",       "lang": "HI"},
+      {"word": "please",     "lang": "EN"},
+      {"word": "help",       "lang": "EN"},
+      {"word": "kar",        "lang": "HI"},
+      {"word": "do",         "lang": "HI"},
+      {"word": "meri",       "lang": "HI"},
+      {"word": "assignment", "lang": "EN"},
+      {"word": "mein",       "lang": "HI"}
+    ]
+  },
+  {
+    "id": 6,
+    "text": "maine usko bola tha ki don't worry",
+    "tokens": [
+      {"word": "maine",  "lang": "HI"},
+      {"word": "usko",   "lang": "HI"},
+      {"word": "bola",   "lang": "HI"},
+      {"word": "tha",    "lang": "HI"},
+      {"word": "ki",     "lang": "HI"},
+      {"word": "don't",  "lang": "EN"},
+      {"word": "worry",  "lang": "EN"}
+    ]
+  },
+  {
+    "id": 7,
+    "text": "kya matlab hai tera? ye toh galat hai",
+    "tokens": [
+      {"word": "kya",    "lang": "HI"},
+      {"word": "matlab", "lang": "HI"},
+      {"word": "hai",    "lang": "HI"},
+      {"word": "tera",   "lang": "HI"},
+      {"word": "ye",     "lang": "HI"},
+      {"word": "toh",    "lang": "HI"},
+      {"word": "galat",  "lang": "HI"},
+      {"word": "hai",    "lang": "HI"}
+    ]
+  },
+  {
+    "id": 8,
+    "text": "abhi exam ke liye padhai karo guys",
+    "tokens": [
+      {"word": "abhi",   "lang": "HI"},
+      {"word": "exam",   "lang": "EN"},
+      {"word": "ke",     "lang": "HI"},
+      {"word": "liye",   "lang": "HI"},
+      {"word": "padhai", "lang": "HI"},
+      {"word": "karo",   "lang": "HI"},
+      {"word": "guys",   "lang": "EN"}
+    ]
+  },
+  {
+    "id": 9,
+    "text": "arre woh teacher bohot strict hai",
+    "tokens": [
+      {"word": "arre",    "lang": "HI"},
+      {"word": "woh",     "lang": "HI"},
+      {"word": "teacher", "lang": "EN"},
+      {"word": "bohot",   "lang": "HI"},
+      {"word": "strict",  "lang": "EN"},
+      {"word": "hai",     "lang": "HI"}
+    ]
+  },
+  {
+    "id": 10,
+    "text": "meri mom ne bola ki jaldi aao ghar",
+    "tokens": [
+      {"word": "meri",  "lang": "HI"},
+      {"word": "mom",   "lang": "EN"},
+      {"word": "ne",    "lang": "HI"},
+      {"word": "bola",  "lang": "HI"},
+      {"word": "ki",    "lang": "HI"},
+      {"word": "jaldi", "lang": "HI"},
+      {"word": "aao",   "lang": "HI"},
+      {"word": "ghar",  "lang": "HI"}
+    ]
+  },
+  {
+    "id": 11,
+    "text": "ye video bahut informative hai thanks bro",
+    "tokens": [
+      {"word": "ye",          "lang": "HI"},
+      {"word": "video",       "lang": "EN"},
+      {"word": "bahut",       "lang": "HI"},
+      {"word": "informative", "lang": "EN"},
+      {"word": "hai",         "lang": "HI"},
+      {"word": "thanks",      "lang": "EN"},
+      {"word": "bro",         "lang": "EN"}
+    ]
+  },
+  {
+    "id": 12,
+    "text": "kuch samajh nahi aa raha mujhe is topic mein",
+    "tokens": [
+      {"word": "kuch",   "lang": "HI"},
+      {"word": "samajh", "lang": "HI"},
+      {"word": "nahi",   "lang": "HI"},
+      {"word": "aa",     "lang": "HI"},
+      {"word": "raha",   "lang": "HI"},
+      {"word": "mujhe",  "lang": "HI"},
+      {"word": "is",     "lang": "HI"},
+      {"word": "topic",  "lang": "EN"},
+      {"word": "mein",   "lang": "HI"}
+    ]
+  },
+  {
+    "id": 13,
+    "text": "please subscribe karo aur bell icon dabao",
+    "tokens": [
+      {"word": "please",    "lang": "EN"},
+      {"word": "subscribe", "lang": "EN"},
+      {"word": "karo",      "lang": "HI"},
+      {"word": "aur",       "lang": "HI"},
+      {"word": "bell",      "lang": "EN"},
+      {"word": "icon",      "lang": "EN"},
+      {"word": "dabao",     "lang": "HI"}
+    ]
+  },
+  {
+    "id": 14,
+    "text": "aaj ka weather bahut nice hai",
+    "tokens": [
+      {"word": "aaj",     "lang": "HI"},
+      {"word": "ka",      "lang": "HI"},
+      {"word": "weather", "lang": "EN"},
+      {"word": "bahut",   "lang": "HI"},
+      {"word": "nice",    "lang": "EN"},
+      {"word": "hai",     "lang": "HI"}
+    ]
+  },
+  {
+    "id": 15,
+    "text": "hum sab milke project complete karenge",
+    "tokens": [
+      {"word": "hum",      "lang": "HI"},
+      {"word": "sab",      "lang": "HI"},
+      {"word": "milke",    "lang": "HI"},
+      {"word": "project",  "lang": "EN"},
+      {"word": "complete", "lang": "EN"},
+      {"word": "karenge",  "lang": "HI"}
+    ]
+  },
+  {
+    "id": 16,
+    "text": "uska presentation toh outstanding tha",
+    "tokens": [
+      {"word": "uska",         "lang": "HI"},
+      {"word": "presentation", "lang": "EN"},
+      {"word": "toh",          "lang": "HI"},
+      {"word": "outstanding",  "lang": "EN"},
+      {"word": "tha",          "lang": "HI"}
+    ]
+  },
+  {
+    "id": 17,
+    "text": "mujhe nahi pata ye kaise karna hai",
+    "tokens": [
+      {"word": "mujhe", "lang": "HI"},
+      {"word": "nahi",  "lang": "HI"},
+      {"word": "pata",  "lang": "HI"},
+      {"word": "ye",    "lang": "HI"},
+      {"word": "kaise", "lang": "HI"},
+      {"word": "karna", "lang": "HI"},
+      {"word": "hai",   "lang": "HI"}
+    ]
+  },
+  {
+    "id": 18,
+    "text": "bhai tu tension mat le sab theek hoga",
+    "tokens": [
+      {"word": "bhai",    "lang": "HI"},
+      {"word": "tu",      "lang": "HI"},
+      {"word": "tension", "lang": "EN"},
+      {"word": "mat",     "lang": "HI"},
+      {"word": "le",      "lang": "HI"},
+      {"word": "sab",     "lang": "HI"},
+      {"word": "theek",   "lang": "HI"},
+      {"word": "hoga",    "lang": "HI"}
+    ]
+  },
+  {
+    "id": 19,
+    "text": "kal exam hai aur kuch nahi padha",
+    "tokens": [
+      {"word": "kal",   "lang": "HI"},
+      {"word": "exam",  "lang": "EN"},
+      {"word": "hai",   "lang": "HI"},
+      {"word": "aur",   "lang": "HI"},
+      {"word": "kuch",  "lang": "HI"},
+      {"word": "nahi",  "lang": "HI"},
+      {"word": "padha", "lang": "HI"}
+    ]
+  },
+  {
+    "id": 20,
+    "text": "ye song mere dil ko touch kar gaya",
+    "tokens": [
+      {"word": "ye",    "lang": "HI"},
+      {"word": "song",  "lang": "EN"},
+      {"word": "mere",  "lang": "HI"},
+      {"word": "dil",   "lang": "HI"},
+      {"word": "ko",    "lang": "HI"},
+      {"word": "touch", "lang": "EN"},
+      {"word": "kar",   "lang": "HI"},
+      {"word": "gaya",  "lang": "HI"}
+    ]
+  }
+]

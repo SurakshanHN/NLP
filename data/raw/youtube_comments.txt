@@ -1,0 +1,35 @@
+# Raw Hinglish sentences collected from YouTube comments and synthetic generation
+# Format: one sentence per line
+# Source: manually curated + synthetic
+# Date: 2026-04-07
+
+kal meeting cancel ho gaya yaar
+bhai ye movie bahut amazing thi
+mujhe lagta hai ki ye sahi nahi hai
+tu kab aa raha hai office?
+yaar please help kar do meri assignment mein
+maine usko bola tha ki don't worry
+kya matlab hai tera? ye toh galat hai
+abhi exam ke liye padhai karo guys
+arre woh teacher bohot strict hai
+meri mom ne bola ki jaldi aao ghar
+ye video bahut informative hai thanks bro
+kuch samajh nahi aa raha mujhe is topic mein
+please subscribe karo aur bell icon dabao
+aaj ka weather bahut nice hai
+hum sab milke project complete karenge
+uska presentation toh outstanding tha
+mujhe nahi pata ye kaise karna hai
+bhai tu tension mat le sab theek hoga
+kal exam hai aur kuch nahi padha
+ye song mere dil ko touch kar gaya
+maine already homework kar liya hai
+tum log kab aoge party mein?
+is channel pe bahut accha content milta hai
+mujhe coding seekhni hai koi suggest karo
+woh bahut talented hai uska future bright hai
+aaj mausam bahut crazy hai
+bhai paise bhej de urgently
+ye dress bahut gorgeous lag rahi hai
+kya tum mere saath movie dekhne chaloge?
+uski handwriting bahut beautiful hai
