@@ -1,3 +1,1 @@
-# models/
-# This directory holds saved model weights (BiLSTM, SentencePiece, etc.).
-# Large files here should be gitignored.
+

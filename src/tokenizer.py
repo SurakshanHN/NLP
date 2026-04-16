@@ -2,19 +2,18 @@ import os
 import re
 from typing import List
 
-# ---------------------------------------------------------------------------
+
 # Regex building blocks
-# ---------------------------------------------------------------------------
 
 # Match any single emoji / emoji sequence
 _EMOJI_RE = re.compile(
     r"["
-    r"\U0001F600-\U0001F64F"   # emoticons
-    r"\U0001F300-\U0001F5FF"   # misc symbols & pictographs
-    r"\U0001F680-\U0001F6FF"   # transport & map
-    r"\U0001F900-\U0001F9FF"   # supplemental symbols & pictographs
-    r"\U0001FA70-\U0001FAFF"   # symbols & pictographs ext-A
-    r"\U00002702-\U000027B0"   # dingbats
+    r"\U0001F600-\U0001F64F"   
+    r"\U0001F300-\U0001F5FF"   
+    r"\U0001F680-\U0001F6FF"   
+    r"\U0001F900-\U0001F9FF"   
+    r"\U0001FA70-\U0001FAFF"   
+    r"\U00002702-\U000027B0"   
     r"]+",
     flags=re.UNICODE,
 )
@@ -34,9 +33,9 @@ _CONTRACTIONS = {
 HINDI_PARTICLES = {"yaar", "hai", "na", "re", "bhi"}
 
 
-# ---------------------------------------------------------------------------
+
 # RuleBasedTokenizer
-# ---------------------------------------------------------------------------
+
 
 class RuleBasedTokenizer:
     """Splits Hinglish text using handcrafted rules for emojis, contractions, and punctuation.
@@ -53,7 +52,6 @@ class RuleBasedTokenizer:
             return [token]
         
         parts: List[str] = []
-        # Use regex to keep the hyphen as a separate token
         for chunk in re.split(r"(\-)", token):
             if chunk:
                 parts.append(chunk)
@@ -64,14 +62,13 @@ class RuleBasedTokenizer:
         if token.lower() in _CONTRACTIONS:
             return [token]
 
-        # Case for particles (just to be safe, though whitespace splitting covers it)
+        # Case for particles
         if token.lower() in HINDI_PARTICLES:
             return [token]
 
         # Split multiple punctuation marks
         match = re.match(rf"^([{re.escape(self._PUNCT)}]*)(.+?)([{re.escape(self._PUNCT)}]*)$", token)
-        if not match:
-            # If it's pure punctuation or otherwise weird
+        if not match:            
             return [c for c in token] if all(c in self._PUNCT for c in token) else [token]
 
         leading, body, trailing = match.groups()
@@ -80,7 +77,6 @@ class RuleBasedTokenizer:
             result.extend(list(leading))
         
         if body:
-            # Check for hyphens in the body
             result.extend(self._split_hyphen(body))
             
         if trailing:
@@ -90,26 +86,21 @@ class RuleBasedTokenizer:
 
     def tokenize(self, text: str) -> List[str]:
         """Shared interface for tokenizing text."""
-        # Multi-stage:
-        # 1. Split by whitespace
-        # 2. Extract emojis
-        # 3. Peel punctuation / Split hyphens
+
         
         raw_tokens = text.split()
         final_tokens = []
         
         for part in raw_tokens:
-            # Handle emojis separately
+            # emojis 
             sub_parts = []
             last_idx = 0
-            for m in _EMOJI_RE.finditer(part):
-                # Text before emoji
+            for m in _EMOJI_RE.finditer(part):            
                 text_before = part[last_idx:m.start()]
                 if text_before: sub_parts.append(text_before)
-                # The emoji itself
                 sub_parts.append(m.group())
                 last_idx = m.end()
-            # Remaining text
+          
             text_after = part[last_idx:]
             if text_after: sub_parts.append(text_after)
             
@@ -124,13 +115,9 @@ class RuleBasedTokenizer:
         return [t for t in final_tokens if t]
 
 
-# ---------------------------------------------------------------------------
-# SentencePieceTokenizer                                         # UPGRADE
-# ---------------------------------------------------------------------------
-# UPGRADE: Use this when you have a larger Hinglish corpus (>= 5k lines).
-# It provides subword tokenization which handles OOV (Out-Of-Vocabulary)
-# words better by breaking them into frequent sub-units.
-# ---------------------------------------------------------------------------
+# SentencePieceTokenizer                                         
+# UPGRADE: is used when corpus >= 5k lines
+
 
 class SentencePieceTokenizer:
     """Subword tokenizer using the SentencePiece library."""
@@ -181,9 +168,8 @@ class SentencePieceTokenizer:
         return self._sp.encode(text, out_type=str)
 
 
-# ---------------------------------------------------------------------------
+
 # Helpers & Demo
-# ---------------------------------------------------------------------------
 
 def compare_tokenizers(text: str) -> None:
     """Prints a side-by-side comparison of RuleBased vs SentencePiece."""
@@ -209,13 +195,11 @@ def main():
     print("RuleBased Result:")
     print(rb.tokenize(demo_input))
     
-    # 2. SentencePieceTokenizer demo (Train if missing)
+    # 2. SentencePieceTokenizer demo
     sp = SentencePieceTokenizer()
     corpus_file = "data/raw/youtube_comments.txt"
     if os.path.exists(corpus_file):
         print("\nTraining SentencePiece (vocab_size=100 for small demo corpus)...")
-        # Using a smaller vocab_size for this tiny demo dataset to avoid errors.
-        # Real-world usage should have >= 5k sentences and vocab_size=800-4000.
         sp.train(corpus_file, vocab_size=100)
     
     print("\nSentencePiece Result:")

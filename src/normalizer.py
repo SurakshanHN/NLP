@@ -6,17 +6,14 @@ try:
 except ImportError:
     fuzz = None
 
-# ---------------------------------------------------------------------------
 # HinglishNormalizer
-# ---------------------------------------------------------------------------
-
 class HinglishNormalizer:
     """Normalizes romanized Hindi spelling variants to canonical forms.
     
     Includes a hand-curated map and a phonetic fallback for spelling variations.
     """
 
-    # variant → canonical mapping (40+ entries)
+    
     VARIANT_MAP: Dict[str, str] = {
         # Pronouns
         "mai": "main", "main": "main", "mein": "main", "mi": "main",
@@ -66,27 +63,25 @@ class HinglishNormalizer:
         if not token_low:
             return token, False
 
-        # 1. Direct map lookup
+        
         if token_low in self.VARIANT_MAP:
             canonical = self.VARIANT_MAP[token_low]
             return canonical, canonical != token_low
 
-        # 2. Phonetic/Fuzzy fallback
         if not fuzz:
             return token, False
 
         best_match = None
         best_score = 0
         
-        # We compare against the keys of the VARIANT_MAP
+        
         for variant in self.VARIANT_MAP.keys():
-            # Use ratio for phonetic similarity
             score = fuzz.ratio(token_low, variant)
             if score > best_score:
                 best_score = score
                 best_match = variant
         
-        # Snap if score exceeds threshold (converted to 0-100)
+        
         if best_match and best_score >= (self.threshold * 100):
             canonical = self.VARIANT_MAP[best_match]
             return canonical, canonical != token_low
@@ -116,13 +111,11 @@ class HinglishNormalizer:
         return [self.phonetic_normalize(t)[0] for t in tokens]
 
 
-# ---------------------------------------------------------------------------
+
 # Demo
-# ---------------------------------------------------------------------------
 
 def main() -> None:
     """Demonstrate Hinglish normalization."""
-    # Test case: casual Hinglish with variations
     demo_tokens = ["mai", "ghar", "ja", "raha", "hu", "yaar"]
     
     print("=== HinglishNormalizer Demo ===")
@@ -133,7 +126,6 @@ def main() -> None:
     
     print(f"\nFinal Normalized: {normalized}")
 
-    # Edge case test
     print("\n--- Edge Case Test ---")
     edge_cases = ["nhi", "bohot", "acha", "hain", "kro"]
     print(f"Original: {edge_cases}")

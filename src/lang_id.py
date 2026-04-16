@@ -7,12 +7,10 @@ try:
     import torch.nn as nn
     import torch.optim as optim
 except ImportError:
-    # We will handle missing torch gracefully if the user hasn't installed it yet
     torch = None
 
-# ---------------------------------------------------------------------------
 # DictBasedLID
-# ---------------------------------------------------------------------------
+
 
 class DictBasedLID:
     """Dictionary-based language identifier.
@@ -68,9 +66,7 @@ class DictBasedLID:
         return labels
 
 
-# ---------------------------------------------------------------------------
 # BiLSTMLID  # UPGRADE
-# ---------------------------------------------------------------------------
 
 if torch:
     class BiLSTMModel(nn.Module):
@@ -102,9 +98,6 @@ class BiLSTMLID:
 
     def _prepare_sequence(self, tokens: List[str]):
         """Converts tokens into a single sequence of characters with padding or concat."""
-        # For simplicity in this demo architecture: 
-        # we treat each token as a character sequence.
-        # A real implementation would handle batching and padding.
         pass
 
     def train(self, data_path: str, epochs: int = 10) -> None:
@@ -156,10 +149,7 @@ class BiLSTMLID:
         return ["HI"] * len(tokens)
 
 
-# ---------------------------------------------------------------------------
 # Helpers & Demo
-# ---------------------------------------------------------------------------
-
 def pretty_print_prediction(text: str, tokens: List[str], labels: List[str]):
     """Pretty prints the LID results."""
     print(f"\nText: {text}")
@@ -180,7 +170,7 @@ def main() -> None:
     print("=== Language Identification Demo ===")
     pretty_print_prediction(demo_text, tokens, labels)
 
-    # 2. BiLSTMLID Setup (No Training)
+    # 2. BiLSTMLID Setup
     print("\n[BiLSTMLID] Initializing architecture...")
     bilstm = BiLSTMLID()
     # Mocking a JSON path for the skeleton call

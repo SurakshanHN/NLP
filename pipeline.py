@@ -3,7 +3,7 @@ import json
 import sys
 from typing import Any, Dict, List
 
-# Try to import rich for pretty console output
+
 try:
     from rich.console import Console
     from rich.table import Table
@@ -21,9 +21,7 @@ from src.normalizer import HinglishNormalizer
 from src.translator import HinglishTranslator
 
 
-# ---------------------------------------------------------------------------
 # Pipeline Engine
-# ---------------------------------------------------------------------------
 
 class HinglishPipeline:
     """Orchestrates the Hinglish NLP components into a unified workflow."""
@@ -72,9 +70,7 @@ class HinglishPipeline:
         return results
 
 
-# ---------------------------------------------------------------------------
 # Output Formatting
-# ---------------------------------------------------------------------------
 
 def print_pretty(result: Dict[str, Any], mode: str):
     """Prints results using the rich library for a premium CLI experience."""

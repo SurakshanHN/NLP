@@ -12,9 +12,8 @@ from src.lang_id import DictBasedLID
 from src.normalizer import HinglishNormalizer
 
 
-# ---------------------------------------------------------------------------
+
 # HinglishTranslator
-# ---------------------------------------------------------------------------
 
 class HinglishTranslator:
     """Translates Hinglish text into English.
@@ -102,9 +101,7 @@ class HinglishTranslator:
         }
 
 
-# ---------------------------------------------------------------------------
 # Demo
-# ---------------------------------------------------------------------------
 
 def main() -> None:
     """Demonstrate Hinglish translation quality improvements."""
