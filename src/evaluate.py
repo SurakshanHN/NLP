@@ -39,8 +39,6 @@ def bleu_score(hypotheses: List[str], references: List[str]) -> float:
     Returns:
         BLEU score as a float.
     """
-    # SacreBLEU expects a list of lists for references (one list per reference version)
-    # Since we have 1 reference per hypothesis, we wrap it.
     bleu = sacrebleu.corpus_bleu(hypotheses, [references])
     return float(bleu.score)
 
@@ -56,7 +54,6 @@ def code_switch_index(token_labels: List[str]) -> float:
     switches = 0
     for i in range(len(token_labels) - 1):
         if token_labels[i] != token_labels[i+1]:
-            # Count any switch as a code-switch in this context
             switches += 1
             
     return switches / (len(token_labels) - 1)

@@ -55,7 +55,6 @@ class HinglishTranslator:
         tokens = self.tokenizer.tokenize(text)
         
         # 2. Identify and Normalize
-        # We only normalize tokens that aren't clearly English
         labels = self.lang_id.predict(tokens)
         
         final_tokens = []

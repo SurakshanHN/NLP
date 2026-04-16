@@ -3,9 +3,7 @@ import re
 from typing import List
 
 
-# Regex building blocks
 
-# Match any single emoji / emoji sequence
 _EMOJI_RE = re.compile(
     r"["
     r"\U0001F600-\U0001F64F"   
@@ -18,7 +16,6 @@ _EMOJI_RE = re.compile(
     flags=re.UNICODE,
 )
 
-# English contractions to keep whole
 _CONTRACTIONS = {
     "don't", "doesn't", "didn't", "won't", "wouldn't", "can't", "couldn't",
     "shouldn't", "isn't", "aren't", "wasn't", "weren't", "haven't", "hasn't",
@@ -29,12 +26,11 @@ _CONTRACTIONS = {
     "let's", "n't",
 }
 
-# Romanized Hindi particles to preserve (listed for documentation; preserved implicitly)
+# Romanized Hindi particles to preserve
 HINDI_PARTICLES = {"yaar", "hai", "na", "re", "bhi"}
 
 
 
-# RuleBasedTokenizer
 
 
 class RuleBasedTokenizer:

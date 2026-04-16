@@ -78,11 +78,8 @@ if torch:
             self.fc = nn.Linear(hidden_dim * 2, output_dim)
 
         def forward(self, x):
-            # x is [batch_size, seq_len]
             embedded = self.embedding(x)
-            # embedded is [batch_size, seq_len, embed_dim]
             lstm_out, _ = self.lstm(embedded)
-            # lstm_out is [batch_size, seq_len, hidden_dim * 2]
             return self.fc(lstm_out)
 
 class BiLSTMLID:
@@ -110,7 +107,6 @@ class BiLSTMLID:
         with open(data_path, 'r') as f:
             data = json.load(f)
 
-        # Build char vocab
         chars = set()
         for item in data:
             for tok in item['tokens']:
@@ -129,23 +125,15 @@ class BiLSTMLID:
         criterion = nn.CrossEntropyLoss()
 
         print(f"[BiLSTMLID] Training loop for {epochs} epochs (SKELETON)...")
-        # --- Training Loop Segment ---
-        # for epoch in range(epochs):
-        #     for item in data:
-        #         self.model.zero_grad()
-        #         # process... 
-        #         # loss.backward()
-        #         # optimizer.step()
+
         
         print("[BiLSTMLID] Training complete (Simulated).")
 
     def predict(self, tokens: List[str]) -> List[str]:
         """Predict labels using BiLSTM."""
         if self.model is None:
-            # Fallback to DictBased if not trained
             return DictBasedLID().predict(tokens)
         
-        # Inference logic would go here
         return ["HI"] * len(tokens)
 
 
@@ -173,7 +161,6 @@ def main() -> None:
     # 2. BiLSTMLID Setup
     print("\n[BiLSTMLID] Initializing architecture...")
     bilstm = BiLSTMLID()
-    # Mocking a JSON path for the skeleton call
     bilstm.train("data/annotated/labeled_sentences.json", epochs=1)
 
 
